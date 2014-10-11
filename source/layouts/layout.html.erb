@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= current_page.data.title || data.site.title %></title>
+
+    <meta name="description" content="<%= current_page.data.title || data.site.title %>">
+    <meta name="keywords" content="<%= data.site.keywords %>">
+    <meta name="author" content="@wansaleh">
+
+    <link rel="shortcut icon" href="<%= imgurl("favicon.png") %>">
+
+    <script>
+      // paceOptions = { elements: { selectors: ['img'] } };
+      imgurl = "<%= data.site.imgurl %>";
+    </script>
+    <script src="/assets/js/vendor.head.js"></script>
+
+    <link href="/assets/css/site.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="<%= page_classes %> lang_<%= I18n.locale %>">
+
+    <!-- Preloader -->
+    <div class="preloader"><img src="<%= imgurl("loading-spin.svg") %>"></div>
+    <!-- Background -->
+    <div class="bg-pattern bg-pattern-vertical"></div>
+    <!-- Video BG -->
+    <div class="back-vide" data-vide-bg="/assets/img/video-conv"></div>
+
+<%= yield %>
+
+    <script src="/assets/js/vendor.js"></script>
+    <script src="/assets/js/site.js"></script>
+
+  </body>
+</html>
+
+<% content_for :arrowup do %>
+<svg class="arrow" viewBox="0 0 94.67 94.67" enable-background="new 0 0 94.67 94.67"><path d="M94.671,67.894l-1.338,1.486L47.335,27.982L1.337,69.38L0,67.894L47.335,25.29L94.671,67.894z"></path></svg>
+<% end %>
+<% content_for :arrowdown do %>
+<svg class="arrow" viewBox="0 0 94.67 94.67" enable-background="new 0 0 94.67 94.67"><path d="M94.67,26.776L47.335,69.38L0,26.776l1.338-1.486l45.997,41.396l45.997-41.396L94.67,26.776z"></path></svg>
+<% end %>

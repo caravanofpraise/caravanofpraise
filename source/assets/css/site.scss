@@ -1,0 +1,646 @@
+// ========================
+// FOUNDATION VERSION 5.4.5
+// ========================
+
+@charset "utf-8";
+
+@import "base";
+@import "pace";
+@import "normalize";
+@import "foundation/components/grid";
+@import "foundation/components/buttons";
+@import "foundation/components/tooltips";
+@import "foundation/components/type";
+@import "foundation/components/visibility";
+// @import "foundation/components/flex-video";
+
+// base styles
+html {
+  height: 100%;
+}
+
+body {
+  background: #666;
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(#000, .1);
+}
+
+.preloader {
+  background-color: $success-color;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+  transition: transform .5s ease-in-out, visibility .5s;
+
+  img {
+    @include center-v;
+    width: 80px;
+    // height: 50px;
+  }
+
+  .loaded & {
+    transform: translateX(-100%);
+    visibility: hidden;
+  }
+}
+
+strong,
+b { font-weight: 700 }
+
+h1 {
+  font-size: rem-calc(60);
+  font-weight: 300;
+  line-height: 1;
+  margin: rem-calc(40) 0;
+
+  strong {
+    display: inline;
+    background: rgba($success-color, .5);
+    line-height: .5;
+    padding: 0 .2em;
+    margin-left: -.2em;
+    margin-right: -.2em;
+  }
+
+  @media #{$medium-only} {
+    font-size: rem-calc(40);
+    margin: rem-calc(25) 0;
+  }
+
+  @media #{$small-only} {
+    font-size: rem-calc(30);
+    margin: rem-calc(15) 0;
+  }
+}
+
+h2 {
+  font-size: rem-calc(40);
+  font-weight: 600;
+  line-height: 1;
+  margin: rem-calc(15) 0;
+
+  @media #{$medium-only} {
+    font-size: rem-calc(35)
+  }
+
+  @media #{$small-only} {
+    font-size: rem-calc(30);
+    line-height: rem-calc(40);
+  }
+}
+
+h3 {
+  font-size: rem-calc(20);
+  margin: rem-calc(10) 0;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: rem-calc(20);
+  margin: rem-calc(10) 0;
+  line-height: rem-calc(24);
+  font-weight: 100;
+
+  @media #{$small-only} {
+    font-size: rem-calc(18);
+  }
+}
+
+h5 {
+  font-size: rem-calc(28);
+  font-weight: 600;
+  margin: rem-calc(15) 0;
+}
+
+h6 {
+  font-size: rem-calc(16);
+  font-weight: 600;
+  margin: rem-calc(10) 0;
+}
+
+p.lead {
+  line-height: 1.2;
+  font-weight: 300;
+  font-size: rem-calc(20);
+}
+
+a { color: #5173bd }
+
+a:hover,
+a:focus { color: #5173bd }
+
+.tooltip {
+  $tt-color: rgba($alert-color, .8);
+
+  background: $tt-color;
+
+  .nub {
+    border-color: transparent transparent $tt-color transparent;
+  }
+}
+
+.breath {
+  margin: rem-calc(50) auto;
+
+  @media #{$medium-only} {
+    margin: rem-calc(30) auto;
+  }
+
+  @media #{$small-only} {
+    margin: rem-calc(30) auto;
+  }
+}
+
+section.breath {
+  margin: 0;
+  padding: rem-calc(80) 0;
+}
+
+.highlight {
+  background: #f4f4f4;
+  margin-top: 40px;
+}
+
+// svgicons
+// http://bbriel.me/svgicons
+svg path, svg polygon, svg rect {
+  fill: #fff;
+}
+svg circle {
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+// small logo
+.small-logo {
+  position: fixed;
+  z-index: 500;
+  transform: translateX(-100%);
+  transition: transform .2s ease-in-out;
+
+  a.logo {
+    display: inline-block;
+    padding: rem-calc(10);
+    background: $success-color;
+
+    img {
+      width: rem-calc(70);
+    }
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: inline-block;
+
+    background: #fff;
+    text-shadow: none;
+    text-align: center;
+
+    a {
+      color: shade($success-color, 10%);
+      display: block;
+      width: rem-calc(100);
+      padding: rem-calc(5) rem-calc(10);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: rem-calc(11);
+      // line-height: 1;
+      letter-spacing: rem-calc(1);
+      text-decoration: none;
+      transition: background .2s, color .2s;
+
+      &:hover {
+        background: $success-color;
+        color: #fff;
+      }
+
+      html:lang(ms) &.lang_ms {
+        display: none;
+      }
+      html:lang(en) &.lang_en {
+        display: none;
+      }
+    }
+  }
+}
+
+.masthead {
+  position: relative;
+  padding: rem-calc(80) rem-calc(15);
+  text-align: center;
+  height: 100%;
+
+  h1 {
+    margin: .5rem;
+  }
+
+  h2 {
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .container {
+    @include center-v;
+  }
+
+  .salam {
+    font-size: rem-calc(30);
+    font-weight: 300;
+
+    img {
+      width: rem-calc(300);
+      max-width: 50%;
+    }
+  }
+
+  .masthead-logo {
+    padding: rem-calc(50) 0;
+    text-align: center;
+
+    img {
+      width: rem-calc(300);
+      max-width: 50%;
+    }
+
+    @media #{$small-only} {
+      padding: rem-calc(20) 0;
+    }
+  }
+
+  @media #{$medium-only} {
+    padding: rem-calc(40) rem-calc(15);
+  }
+
+  @media #{$small-only} {
+    background-attachment: scroll;
+  }
+}
+
+// Bouncing Arrow Animation
+
+@keyframes arrowBounce {
+  from {
+    transform: translateY();
+  }
+
+  to {
+    transform: translateY(rem-calc(-20));
+  }
+}
+
+.scrollto {
+  margin: rem-calc(50) auto 0;
+  display: block;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+
+  @media #{$medium-only} {
+    margin: rem-calc(70) auto 0;
+  }
+}
+
+.scrollto,
+.scrollto:hover,
+.scrollto:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.scrollto--arrow {
+  img, svg {
+    animation: arrowBounce .5s alternate infinite;
+  }
+
+  svg {
+    width: rem-calc(70);
+
+    @media #{$small-only} {
+      width: rem-calc(40);
+    }
+  }
+}
+
+.store .button {
+  background: none;
+  border: 2px solid #fff;
+  font-size: rem-calc(20);
+  letter-spacing: .1em;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media #{$small-only} {
+    font-size: 1em;
+    padding: .5em 1em;
+  }
+}
+
+
+/*===SECTION TITLE===*/
+
+.section-title {
+  margin: rem-calc(60) auto;
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin-right: -.15em;
+    font-size: rem-calc(60);
+    font-weight: 300;
+
+    @media #{$small-only} {
+      font-size: rem-calc(36);
+      line-height: .8;
+      letter-spacing: .1em;
+      margin-right: -.1em;
+    }
+  }
+
+  i.fa {
+    font-size: rem-calc(120);
+    display: block;
+    margin-bottom: rem-calc(40);
+    color: rgba(#fff, .9);
+  }
+}
+
+p.lead {
+  @media #{$small-only} {
+    font-size: 1em;
+    line-height: 1;
+    // remove br
+    br { content: ' ' }
+    br:after { content: ' ' }
+  }
+}
+
+
+/*==========HERO==============*/
+
+.hero {
+  height: 100%;
+  text-align: right;
+
+  .container {
+    // @include center-v;
+  }
+
+  .lyrics {
+    font-family: "Lato", $font-family-sans-serif;
+    font-size: rem-calc(28);
+    font-weight: 300;
+    line-height: .9;
+    font-style: italic;
+
+    strong {
+      font-size: 1.2em;
+      font-weight: 700;
+      line-height: .5;
+    }
+
+    @media #{$small-only} {
+      font-size: rem-calc(20);
+    }
+  }
+
+  .cite {
+    display: inline-block;
+    padding: rem-calc(5) rem-calc(10);
+    background: rgba($success-color, .5);
+  }
+}
+
+/*==========MASTERPIECE==============*/
+
+.masterpiece {
+  height: 100%;
+  text-align: left;
+
+  .container {
+    // @include center-v;
+  }
+
+  h1 {
+    font-weight: 100;
+    line-height: .9;
+    margin-top: rem-calc(-140);
+  }
+
+  i.fa {
+    font-size: rem-calc(200);
+    color: rgba($success-color, .3);
+    margin-left: rem-calc(-60);
+    text-shadow: none;
+  }
+}
+
+// .section-title h2 { color: #384047 }
+
+// .section-title h4 { color: #94a3a8 }
+
+.heroimg img,
+.clientlogo img { max-width: 100% }
+
+/*==========TEAM==============*/
+
+.team {
+  // height: 100%;
+  text-align: center;
+
+  // .container {
+  //   @include center-v;
+  // }
+}
+
+.teamblock {
+  .caption {
+    font-size: rem-calc(16);
+
+    h3 {
+      display: inline-block;
+      background: rgba($success-color, .9);
+      padding: .1em .5em .15em;
+      font-size: 1.2em;
+      font-weight: 300;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    @media #{$small-only} {
+      font-size: rem-calc(14);
+    }
+  }
+
+  img {
+    transition: all 0.3s ease-in-out;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    padding: 2px;
+    box-shadow: 0 1px 0 rgba(#000, .1);
+
+    @media #{$small-only} {
+    }
+  }
+
+  // &:hover {
+  //   img {
+  //     transform: scale(1.05);
+  //   }
+  // }
+}
+
+/*==========GMAP==============*/
+.gmaps {
+  margin-top: rem-calc(30);
+  // border-top: 5px solid $primary-color;
+}
+
+#gmap {
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+
+  img {
+    max-width: none !important;
+  }
+
+  .infowin {
+    padding: 5px 10px;
+    color: $jet;
+
+    p, a {
+      margin-bottom: 10px;
+      font-family: $font-family-sans-serif;
+      font-size: rem-calc(12);
+      line-height: rem-calc(16);
+    }
+  }
+
+  .infowin a {
+    // color: #F28C83;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .gm-style-cc {
+    // opacity: .3 !important;
+  }
+}
+
+/*==========FOOTER==============*/
+
+footer {
+  background: rgba($primary-color, .9);
+  background: #fff;
+  color: $grey-color;
+  padding: rem-calc(40px) 0;
+  border-top: 5px solid tint($alert-color, 20);
+  text-shadow: none;
+
+  h1, h1.subheader {
+    margin: 2em 0 0;
+    color: $grey-color;
+    line-height: .9;
+    letter-spacing: 0;
+  }
+  h1.subheader {
+    margin: 0 0 2em;
+    font-weight: 100;
+    color: tint($grey-color, 50);
+  }
+}
+
+.footer-address p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.2;
+  font-weight: 300;
+
+  @media #{$small-only} {
+    margin-bottom: 2em;
+  }
+}
+
+.footer-links {
+  h3, h4 {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  h4 {
+    color: tint($alert-color, 20);
+  }
+}
+
+.footerlinks a {
+  padding: 0 rem-calc(13) rem-calc(15);
+  display: inline-block;
+}
+
+// background images
+
+.backstretch-carousel, .back-vide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -4;
+}
+
+.back-vide {
+  z-index: -3;
+}
+
+.bg-pattern {
+  background: url(#{$imgurl}/pattern_no.png) repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.bg-pattern-vertical {
+  background-image: url(#{$imgurl}/pattern_vertical.png);
+}
+.bg-pattern-diag {
+  background-image: url(#{$imgurl}/pattern_diag.png);
+}
+.bg-pattern-denim {
+  background-image: url(#{$imgurl}/pattern_darkdenim.png);
+}
+
+
+@media #{$small-only} {
+  .masthead, .hero, .masterpiece {
+    height: auto;
+  }
+
+  .masthead .container {
+    @include center-v(false);
+  }
+
+}

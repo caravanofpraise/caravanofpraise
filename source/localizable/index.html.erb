@@ -1,0 +1,113 @@
+    <!-- ******************** SMALL TOPNAV ******************** -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <!-- HIDDEN -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <header class="hide small-logo" role="header">
+      <!-- <a href="#top" class="logo gototop"><img alt="logo" src="<%= imgurl("logo_white_small.png") %>"></a> -->
+      <nav>
+        <a href="/" class="lang_ms"><i class="fa fa-flag"></i> Malay</a>
+        <a href="/en" class="lang_en"><i class="fa fa-flag"></i> English</a>
+      </nav>
+    </header>
+
+    <!-- ******************** MASTHEAD SECTION ******************** -->
+    <main class="masthead screen" id="top" role="main" data-scroll-index="0">
+      <div class="container">
+        <div class="row">
+          <div class="small-12 columns">
+            <!-- <h2 class="salam">Assalamualaikum Warahmatullah.</h2> -->
+            <div class="salam">
+              <img src="<%= imgurl("salam_white.png") %>" alt="">
+            </div>
+
+            <div class="masthead-logo">
+              <!-- <a href="#"><img alt="logo" src="<%= imgurl("logo_white.png") %>"></a> -->
+            </div>
+
+            <h1><%= t(:intro_heading) %></h1>
+            <h2 class="subheader"><%= t(:intro_sub) %></h2>
+
+            <!-- <a class="scrollto" href="#explore">
+              <p class="scrollto--arrow"><%= yield_content :arrowdown %></p>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ******************** HERO SECTION ******************** -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <!-- HIDDEN -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <section class="hide hero screen breath" id="explore" data-scroll-index="1">
+      <div class="container">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="section-title">
+              <!-- <i class="fa fa-send wow fade-in-down" data-wow-delay="0.2s"></i> -->
+
+              <h2 class="wow fade-in-right" data-wow-delay="0.3s"><%= t(:passion) %></h2>
+              <p class="lead wow fade-in-right" data-wow-delay="0.4s"><%= t(:passion_sub) %></p>
+            </div>
+
+            <p class="lyrics wow fade-in-right" data-wow-delay="0.5s">
+              Dalam diri selembut sutera<br>
+              Kau miliki <strong>iman yang teguh</strong><br>
+              Kau nyalakan obor agama dirimu bak lentera<br>
+              dibelengu jahiliah kau tempuh dengan berani<br>
+              Walau pun jasadmu milik tuan<br>
+              Tetapi <strong>hatimu milik Tuhan</strong>
+            </p>
+            <p class="cite wow fade-in-right" data-wow-delay="0.8s">
+              Munif Ahmad &amp; ITO Lara, &lsquo;04
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************** MASTERPIECE SECTION ******************** -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <!-- HIDDEN -->
+    <!-- ====== -->
+    <!-- ====== -->
+    <section class="hide masterpiece screen breath" data-scroll-index="2">
+      <div class="container">
+        <div class="row">
+          <div class="small-12 columns">
+            <div class="section-title">
+              <i class="fa fa-quote-left wow fade-in-left" data-wow-delay="0.6s"></i>
+              <h1 class="wow fade-in-left" data-wow-delay="0.3s"><%= t(:masterpiece) %></h1>
+            </div>
+
+            <!-- <div class="flex-video widescreen">
+              <iframe width="854" height="510" src="//www.youtube.com/embed/5kYqnYlZ1a8" frameborder="0" allowfullscreen></iframe>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************** FOOTER ******************** -->
+    <footer class="container" data-scroll-index="5">
+      <div class="row">
+        <div class="large-12 footer-text text-center">
+          <h1><%= t(:footer1) %></h1>
+          <h1 class="subheader"><%= t(:footer2) %></h2>
+        </div>
+        <div class="medium-6 large-6 columns footer-address text-left small-only-text-center">
+          <p>
+            <!-- <%= t(:footer_address) %> -->
+          </p>
+        </div>
+        <div class="medium-6 large-6 columns footer-links text-right small-only-text-center">
+          <h3>&copy; 2014 <%= t(:reserved) %></h3>
+          <h4><%= t(:footer_by) %> Mahabbah Tech.</h4>
+        </div>
+      </div>
+    </footer>
