@@ -18,6 +18,27 @@ $ ->
   # Wow animation
   new WOW(offset: 100).init()
 
+  # Slab Text
+  setTimeout (->
+    $(".slab").slabText
+      viewportBreakpoint: 380
+  ), 400
+
+  # Shadow
+  # setTimeout (->
+  #   $('.slab-wrapper').realshadow
+  #     type: 'text'
+  #     followMouse: false
+  #     length: 6
+
+  #   $('.salam').realshadow
+  #     type: 'drop'
+  #     # followMouse: false
+  #     length: 3
+  #     color: '128,128,128'
+
+  # ), 800
+
   # # Background images
   # $.backstretch [
   #   "#{imgurl}/bg_sea.jpg"
