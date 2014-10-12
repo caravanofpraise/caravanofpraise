@@ -21,11 +21,8 @@ configure :development do
   activate :livereload, :no_swf => true
 end
 
-# Localization
-# ----------------------------------------------
-activate :i18n, :mount_at_root => :en
-
 # Paths
+# ----------------------------------------------
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
 set :images_dir, 'assets/img'

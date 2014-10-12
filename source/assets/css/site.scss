@@ -2,8 +2,8 @@
 
 // CDN assets
 @import "//fonts.googleapis.com/css?family=Raleway:100,300,500,600,700";
-@import "//fonts.googleapis.com/css?family=Josefin+Sans";
-// @import "//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css";
+@import "//fonts.googleapis.com/css?family=Dosis";
+@import "//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css";
 
 // Normalize
 @import "normalize";
@@ -159,16 +159,6 @@ a { color: #5173bd }
 a:hover,
 a:focus { color: #5173bd }
 
-.tooltip {
-  $tt-color: rgba($alert-color, .8);
-
-  background: $tt-color;
-
-  .nub {
-    border-color: transparent transparent $tt-color transparent;
-  }
-}
-
 .breath {
   margin: rem-calc(50) auto;
 
@@ -186,11 +176,6 @@ section.breath {
   padding: rem-calc(80) 0;
 }
 
-.highlight {
-  background: #f4f4f4;
-  margin-top: 40px;
-}
-
 // svgicons
 // http://bbriel.me/svgicons
 svg path, svg polygon, svg rect {
@@ -199,65 +184,6 @@ svg path, svg polygon, svg rect {
 svg circle {
   stroke: #fff;
   stroke-width: 1;
-}
-
-// small logo
-.small-logo {
-  position: fixed;
-  z-index: 500;
-  transform: translateX(-100%);
-  transition: transform .2s ease-in-out;
-
-  a.logo {
-    display: inline-block;
-    padding: rem-calc(10);
-    background: $success-color;
-
-    img {
-      width: rem-calc(70);
-    }
-  }
-
-  &.show {
-    transform: translateX(0);
-  }
-
-  nav {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    display: inline-block;
-
-    background: #fff;
-    text-shadow: none;
-    text-align: center;
-
-    a {
-      color: shade($success-color, 10%);
-      display: block;
-      width: rem-calc(100);
-      padding: rem-calc(5) rem-calc(10);
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: rem-calc(11);
-      // line-height: 1;
-      letter-spacing: rem-calc(1);
-      text-decoration: none;
-      transition: background .2s, color .2s;
-
-      &:hover {
-        background: $success-color;
-        color: #fff;
-      }
-
-      html:lang(ms) &.lang_ms {
-        display: none;
-      }
-      html:lang(en) &.lang_en {
-        display: none;
-      }
-    }
-  }
 }
 
 // Slab Text
@@ -299,7 +225,7 @@ h1, h2, h3 {
   }
 
   .salam {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 
     img {
       width: 70%;
@@ -337,8 +263,7 @@ h1, h2, h3 {
     color: $grass-light;
   }
   h2.sub {
-    font-family: "Josefin Sans", $font-family-sans-serif;
-    text-transform: default;
+    font-family: "Dosis", $font-family-sans-serif;
     // color: $mediumgray-dark;
   }
 
@@ -446,166 +371,6 @@ p.lead {
     // remove br
     br { content: ' ' }
     br:after { content: ' ' }
-  }
-}
-
-
-/*==========HERO==============*/
-
-.hero {
-  height: 100%;
-  text-align: right;
-
-  .container {
-    // @include center-v;
-  }
-
-  .lyrics {
-    font-family: "Lato", $font-family-sans-serif;
-    font-size: rem-calc(28);
-    font-weight: 300;
-    line-height: .9;
-    font-style: italic;
-
-    strong {
-      font-size: 1.2em;
-      font-weight: 700;
-      line-height: .5;
-    }
-
-    @media #{$small-only} {
-      font-size: rem-calc(20);
-    }
-  }
-
-  .cite {
-    display: inline-block;
-    padding: rem-calc(5) rem-calc(10);
-    background: rgba($success-color, .5);
-  }
-}
-
-/*==========MASTERPIECE==============*/
-
-.masterpiece {
-  height: 100%;
-  text-align: left;
-
-  .container {
-    // @include center-v;
-  }
-
-  h1 {
-    font-weight: 100;
-    line-height: .9;
-    margin-top: rem-calc(-140);
-  }
-
-  i.fa {
-    font-size: rem-calc(200);
-    color: rgba($success-color, .3);
-    margin-left: rem-calc(-60);
-    text-shadow: none;
-  }
-}
-
-// .section-title h2 { color: #384047 }
-
-// .section-title h4 { color: #94a3a8 }
-
-.heroimg img,
-.clientlogo img { max-width: 100% }
-
-/*==========TEAM==============*/
-
-.team {
-  // height: 100%;
-  text-align: center;
-
-  // .container {
-  //   @include center-v;
-  // }
-}
-
-.teamblock {
-  .caption {
-    font-size: rem-calc(16);
-
-    h3 {
-      display: inline-block;
-      background: rgba($success-color, .9);
-      padding: .1em .5em .15em;
-      font-size: 1.2em;
-      font-weight: 300;
-    }
-
-    p {
-      font-size: 1em;
-      line-height: 1;
-      font-weight: 300;
-    }
-
-    @media #{$small-only} {
-      font-size: rem-calc(14);
-    }
-  }
-
-  img {
-    transition: all 0.3s ease-in-out;
-    border-radius: 100%;
-    border: 3px solid #fff;
-    padding: 2px;
-    box-shadow: 0 1px 0 rgba(#000, .1);
-
-    @media #{$small-only} {
-    }
-  }
-
-  // &:hover {
-  //   img {
-  //     transform: scale(1.05);
-  //   }
-  // }
-}
-
-/*==========GMAP==============*/
-.gmaps {
-  margin-top: rem-calc(30);
-  // border-top: 5px solid $primary-color;
-}
-
-#gmap {
-  display: block;
-  width: 100%;
-  height: 500px;
-  margin: 0 auto;
-
-  img {
-    max-width: none !important;
-  }
-
-  .infowin {
-    padding: 5px 10px;
-    color: $jet;
-
-    p, a {
-      margin-bottom: 10px;
-      font-family: $font-family-sans-serif;
-      font-size: rem-calc(12);
-      line-height: rem-calc(16);
-    }
-  }
-
-  .infowin a {
-    // color: #F28C83;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .gm-style-cc {
-    // opacity: .3 !important;
   }
 }
 
