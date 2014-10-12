@@ -5,7 +5,6 @@
 //= require "jquery-backstretch"
 //= require "wow"
 //= require "slabText/js/jquery.slabtext.js"
-//= require "real-shadow"
 // require "stellar"
 // require "foundation/js/foundation/foundation.js"
 // require "foundation/js/foundation/foundation.tooltip.js"
