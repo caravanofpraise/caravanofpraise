@@ -23,7 +23,8 @@
     "animate.css": "~3.2.0",
     "bootswatch": "~3.2.0+4",
     "slabText": "~2.2.0",
-    "real-shadow": "~1.3.4"
+    "real-shadow": "~1.3.4",
+    "bigtext": "~0.1.6"
   },
   "resolutions": {
     "jquery": "~2.1.1"

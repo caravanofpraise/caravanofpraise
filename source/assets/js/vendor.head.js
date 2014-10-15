@@ -1,2 +1,2 @@
 //= require "modernizr/modernizr.js"
-//= require "pace"
+// require "pace"
