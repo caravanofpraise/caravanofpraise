@@ -16,6 +16,7 @@
 
 // Pace
 @import "pace";
+// @import "fonts";
 
 // Animation.scss
 @import "animate-scss/src/animate";
@@ -194,7 +195,7 @@ svg circle {
   opacity: 0;
 
   h1, h2, h3 {
-    font-family: "LeagueGothicRegular", $font-family-sans-serif;
+    font-family: "league-gothic", $font-family-sans-serif;
     font-weight: 800;
     line-height: .85;
     text-transform: uppercase;
@@ -361,6 +362,11 @@ footer {
     margin: 0 0 2em;
     font-weight: 100;
     color: $mediumgray-dark;
+  }
+
+  h2 {
+    color: $mediumgray-light;
+    margin-bottom: 2rem;
   }
 }
 
