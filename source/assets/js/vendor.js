@@ -5,7 +5,7 @@
 // require "jquery-backstretch"
 // require "wow"
 //= require "bigtext"
-//= require "slabText/js/jquery.slabtext"
+// require "slabText/js/jquery.slabtext"
 // require "stellar"
 // require "foundation/js/foundation/foundation.js"
 // require "foundation/js/foundation/foundation.tooltip.js"
