@@ -2,13 +2,30 @@
 
 $ ->
 
-  # WebFont.load
-  #   custom: {
-  #     families: ['LeagueGothicRegular']
-  #     urls : ['/assets/css/fonts.css']
-  #   },
-  #   active: ->
-  #     $('.bigtext-wrapper').bigtext()
+  # Background images
+  # $('.backstretch-1').backstretch "#{imgurl}/bg_brickwall.jpg"
+  # $('.backstretch-2')
+  #   .backstretch "#{imgurl}/bg_brickwall_blur.jpg"
+  #   .css opacity: 0
+
+  # # Parallax
+  # scrl = ->
+  #   st = $(window).scrollTop()
+  #   wh = $(window).height()
+  #   opa = Math.min(st/(0.8*wh), 1)
+  #   $('.backstretch-2').css opacity: opa
+
+  # scrl()
+  # $(window).scroll -> scrl()
+
+  WebFont.load
+    custom: {
+      families: ['league-gothic', 'franklin-gothic']
+      urls : ['/assets/css/fonts.css']
+    },
+    active: ->
+      $('.bigtext-wrapper').bigtext()
+      # $('.slab').slabText fontRatio: .4
 
   # $(".scrollto, .gototop").bind "click", (event) ->
   #   $anchor = $(this)

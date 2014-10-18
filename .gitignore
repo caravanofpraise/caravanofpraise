@@ -7,3 +7,5 @@ bower/
 /*.iml
 ## Directory-based project format:
 .idea/
+
+_assets/
