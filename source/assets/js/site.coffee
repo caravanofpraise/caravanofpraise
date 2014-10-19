@@ -3,7 +3,7 @@
 $ ->
 
   # Background images
-  # $('.backstretch-1').backstretch "#{imgurl}/bg_brickwall.jpg"
+  $('.backstretch-1').backstretch "#{imgurl}/bg_brickwall.jpg"
   # $('.backstretch-2')
   #   .backstretch "#{imgurl}/bg_brickwall_blur.jpg"
   #   .css opacity: 0

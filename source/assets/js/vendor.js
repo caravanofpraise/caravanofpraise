@@ -1,10 +1,16 @@
 //= require "jquery"
+//= require "bigtext"
+//= require "wow"
+//= require "jquery-backstretch"
+
+
+
+
+// UNUSED
+
 // require "vide"
 // require "jquery-easing"
 // require "jquery-waypoints"
-// require "jquery-backstretch"
-// require "wow"
-//= require "bigtext"
 // require "slabText/js/jquery.slabtext"
 // require "stellar"
 // require "foundation/js/foundation/foundation.js"
