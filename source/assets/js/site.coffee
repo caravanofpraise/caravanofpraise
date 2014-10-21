@@ -18,15 +18,6 @@ $ ->
   # scrl()
   # $(window).scroll -> scrl()
 
-  WebFont.load
-    custom: {
-      families: ['league-gothic', 'franklin-gothic']
-      urls : ['/assets/css/fonts.css']
-    },
-    active: ->
-      $('.bigtext-wrapper').bigtext()
-      # $('.slab').slabText fontRatio: .4
-
   # $(".scrollto, .gototop").bind "click", (event) ->
   #   $anchor = $(this)
   #   $("html, body").stop().animate
