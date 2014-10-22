@@ -164,7 +164,14 @@ a:focus { color: #5173bd }
     color: $bittersweet-light;
     font-size: 6rem;
     line-height: 1;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
+  }
+
+  h3 {
+    color: $mediumgray-dark;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0 0 2rem;
   }
 
   p {
@@ -216,8 +223,11 @@ a:focus { color: #5173bd }
 
     h1 {
       font-size: 3rem;
-      line-height: 1;
       margin: 1.5rem 0;
+    }
+
+    h3 {
+      font-size: 1.5rem;
     }
 
     p {

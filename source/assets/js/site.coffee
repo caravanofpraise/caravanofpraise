@@ -2,8 +2,18 @@
 
 $ ->
 
+  # Wow animation
+  new WOW(offset: 100).init()
+
   # Background images
-  $('.backstretch-1').backstretch "#{imgurl}/bg_brickwall.jpg"
+  $.backstretch [
+    "#{imgurl}/bg_brickwall.jpg"
+    "#{imgurl}/bg_river.jpg"
+    "#{imgurl}/bg_canyon.jpg"
+    ],
+      duration: 15000,
+      fade: 1000
+
   # $('.backstretch-2')
   #   .backstretch "#{imgurl}/bg_brickwall_blur.jpg"
   #   .css opacity: 0
@@ -24,9 +34,6 @@ $ ->
   #     scrollTop: $($anchor.attr("href")).offset().top
   #   , 800, "easeInOutQuart"
   #   event.preventDefault()
-
-  # # Wow animation
-  # new WOW(offset: 100).init()
 
   # Shadow
   # setTimeout (->

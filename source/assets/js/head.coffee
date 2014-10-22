@@ -10,5 +10,4 @@ WebFont.load
   # },
 
   active: ->
-
     $('.bigtext-wrapper').bigtext()
