@@ -2,58 +2,35 @@
 
 $ ->
 
+  # FastClick
+  FastClick.attach document.body
+
   # Wow animation
   new WOW(offset: 100).init()
 
   # Background images
   $.backstretch [
     "#{imgurl}/bg_brickwall.jpg"
-    "#{imgurl}/bg_river.jpg"
     "#{imgurl}/bg_canyon.jpg"
+    "#{imgurl}/bg_typewriter.jpg"
+    "#{imgurl}/bg_lalang.jpg"
+    "#{imgurl}/bg_palm.jpg"
+    "#{imgurl}/bg_wood.jpg"
+    "#{imgurl}/bg_river.jpg"
     ],
-      duration: 15000,
-      fade: 1000
+      duration: 10000,
+      fade: 2000
 
-  # $('.backstretch-2')
-  #   .backstretch "#{imgurl}/bg_brickwall_blur.jpg"
-  #   .css opacity: 0
+  # masonry
+  $container = $('.masonry')
+  $container.imagesLoaded ->
+    $container.masonry itemSelector: '.item'
+    # $('.item img').addClass('not-loaded')
+    # $('.item img.not-loaded').lazyload
+    #   effect: 'fadeIn',
+    #   load: ->
+    #     $(this).removeClass("not-loaded").addClass("loaded")
+    #     $container.masonry('reloadItems')
+    #     $container.masonry('layout')
+    # $('.item img.not-loaded').trigger('scroll')
 
-  # # Parallax
-  # scrl = ->
-  #   st = $(window).scrollTop()
-  #   wh = $(window).height()
-  #   opa = Math.min(st/(0.8*wh), 1)
-  #   $('.backstretch-2').css opacity: opa
-
-  # scrl()
-  # $(window).scroll -> scrl()
-
-  # $(".scrollto, .gototop").bind "click", (event) ->
-  #   $anchor = $(this)
-  #   $("html, body").stop().animate
-  #     scrollTop: $($anchor.attr("href")).offset().top
-  #   , 800, "easeInOutQuart"
-  #   event.preventDefault()
-
-  # Shadow
-  # setTimeout (->
-  #   $('.slab-wrapper').realshadow
-  #     type: 'text'
-  #     followMouse: false
-  #     length: 6
-
-  #   $('.salam').realshadow
-  #     type: 'drop'
-  #     # followMouse: false
-  #     length: 3
-  #     color: '128,128,128'
-
-  # ), 800
-
-  # # Pace preloader
-  # Pace?.on "done", ->
-  #   setTimeout (->
-  #     $("html").addClass("loaded")
-  #     ), 300
-
-  # return

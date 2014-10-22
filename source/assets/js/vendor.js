@@ -1,17 +1,8 @@
 //= require "jquery"
+//= require "imagesloaded/imagesloaded.pkgd.js"
+//= require "masonry/dist/masonry.pkgd.js"
+// require "jquery.lazyload/jquery.lazyload.js"
 //= require "bigtext"
 //= require "wow"
 //= require "jquery-backstretch"
-
-
-
-
-// UNUSED
-
-// require "vide"
-// require "jquery-easing"
-// require "jquery-waypoints"
-// require "slabText/js/jquery.slabtext"
-// require "stellar"
-// require "foundation/js/foundation/foundation.js"
-// require "foundation/js/foundation/foundation.tooltip.js"
+//= require "fastclick"

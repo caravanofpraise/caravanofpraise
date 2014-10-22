@@ -92,14 +92,35 @@
       </div>
     </section>
 
+    <!-- ******************** BIG BOTTOM ******************** -->
     <section class="big-bottom">
       <div class="container">
         <div class="row">
-          <div class="small-10 small-centered columns">
+          <div class="small-10 large-9 small-centered columns">
             <div class="bigtext-wrapper">
               <h1 class="hsjs wow fade-in-left" data-wow-delay="0s">Come Join The Caravan</h1>
               <h2 class="hsjs wow fade-in-right" data-wow-delay="0.5s">Let's Praise To Raise</h2>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ******************** MASONRY ******************** -->
+    <section class="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="small-12 columns">
+            <!-- <h2>Our Activites</h2> -->
+
+            <div class="masonry">
+<% list_gallery_thumbs.each do |thumb| %>
+              <div class="item<%= thumb.landscape ? ' w2' : '' %>">
+                <div class="in"><img src="<%= thumb.url %>" alt=""></div>
+              </div>
+<% end %>
+            </div>
+
           </div>
         </div>
       </div>

@@ -6,14 +6,14 @@
 // Color names
 @import "colors";
 
+// Pace
+@import "pace";
+
 // Foundation imports
 @import "base";
 @import "foundation/components/grid";
 @import "foundation/components/type";
 @import "foundation/components/visibility";
-
-// Pace
-@import "pace";
 
 // Animation.scss
 @import "animate-scss/src/animate";
@@ -34,27 +34,6 @@ body {
   margin: 0;
   padding: 0;
   text-shadow: 1px 1px 0 rgba(#000, .3);
-}
-
-.preloader {
-  background-color: $grapefruit-light;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  text-align: center;
-  transition: transform .5s ease-in-out, visibility .5s;
-
-  img {
-    @include center-v;
-    width: 80px;
-    // height: 50px;
-  }
-
-  .loaded & {
-    transform: translateX(-100%);
-    visibility: hidden;
-  }
 }
 
 strong,
@@ -253,7 +232,7 @@ a:focus { color: #5173bd }
 
 .big-bottom {
   .bigtext-wrapper {
-    margin: 8rem 0 10rem;
+    margin: 8rem 0;
     text-shadow: 2px 2px 0 rgba(#000, .3);
 
     h1, h2 {
@@ -273,18 +252,31 @@ a:focus { color: #5173bd }
 
 }
 
+/*==========GALLERY==============*/
+
+.gallery {
+  text-shadow: none;
+  background: #fff;
+  color: $darkgray-light;
+  text-align: center;
+
+  .container {
+    padding: 6rem 0;
+  }
+}
+
 /*==========FOOTER==============*/
 
 footer {
-  padding: 0 0 6rem;
+  padding: 6rem 0;
   text-align: center;
-  text-shadow: 2px 2px 0 rgba(#000, .2);
+  text-shadow: 1px 1px 0 rgba(#000, .2);
   color: #fff;
 
   .box {
     display: inline-block;
     padding: .8rem 1.5rem;
-    background: rgba(#fff, .1);
+    background: rgba(#fff, .2);
     // border: 1px solid rgba(#fff, .3);
     border-radius: 3px;
   }
@@ -304,35 +296,39 @@ footer {
 // =================================
 // background images
 
-.backstretch-carousel, .back-vide {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -4;
-}
-
-.back-vide {
-  z-index: -3;
-}
-
 .bg-layer {
-  background: #8b534d;
+  // background: #8b534d;
+  background: desaturate(shade($bittersweet-light, 60%), 20%);
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: -1;
-  opacity: .7;
+  z-index: -100;
+  opacity: .6;
 }
 
-.backstretch {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -5;
+// .backstretch {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   z-index: -5;
+// }
+
+// Masonry
+.item {
+  width: 50%;
+  .in {
+    margin: 2px;
+    border-radius: 5px;
+    // border: 1px solid #333;
+    overflow: hidden;
+  }
+
+  @media #{$small-only} {
+    width: 100%;
+  }
 }
+// .item.w2 { width: 50%; }

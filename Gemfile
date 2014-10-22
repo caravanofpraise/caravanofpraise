@@ -19,3 +19,6 @@ gem 'middleman-minify-html', '~> 3.4.0'
 gem 'coffee-script', '~> 2.3.0'
 gem 'compass', '~> 1.0.1'
 gem 'sass', '~> 3.4.5'
+
+# image
+gem "fastimage"
