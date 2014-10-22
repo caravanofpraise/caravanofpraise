@@ -6,3 +6,4 @@
 //= require "wow"
 //= require "jquery-backstretch"
 //= require "fastclick"
+// require "stellar"

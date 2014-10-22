@@ -7,8 +7,8 @@
               <img src="<%= imgurl("salam.png") %>" alt="">
             </div> -->
 
-            <h1 class="wow bounce-in-down" data-wow-delay="0s">Come Join The Caravan</h1>
-            <h2 class="wow fade-in-up" data-wow-delay="1s">Let's Raise To Praise</h2>
+            <h1 class="wow fade-in-down" data-wow-delay="0s">Come Join The Caravan</h1>
+            <h2 class="wow fade-in-up" data-wow-delay="0.5s">Let's Raise To Praise</h2>
 
             <div class="masthead-logo">
               <img alt="logo" src="<%= imgurl("logo.png") %>">
@@ -23,13 +23,13 @@
       <div class="container">
         <div class="row">
           <div class="large-12 columns">
-            <h1 class="wow fade-in-left" data-wow-delay="0s">&ldquo;Caravan of Praise&rdquo;</h1>
+            <h1>&ldquo;Caravan of Praise&rdquo;</h1>
           </div>
         </div>
 
         <div class="row">
           <div class="large-12 columns">
-            <h3 class="wow fade-in-right" data-wow-delay="0.5s">
+            <h3>
               <strong>Lyrics by</strong> Erwan Muhibbain &middot;
               <strong>Song by</strong> Fuad Priakustik
             </h3>
@@ -116,7 +116,10 @@
             <div class="masonry">
 <% list_gallery_thumbs.each do |thumb| %>
               <div class="item<%= thumb.landscape ? ' w2' : '' %>">
-                <div class="in"><img src="<%= thumb.url %>" alt=""></div>
+                <div class="in">
+                  <div class="ol"></div>
+                  <img src="<%= thumb.url %>" alt="">
+                </div>
               </div>
 <% end %>
             </div>

@@ -2,7 +2,7 @@ fontsdir = '/assets/fonts'
 
 WebFont.load
   google:
-    families: ["Shadows+Into+Light", "Amatic+SC"]
+    families: ["Amatic+SC"]
 
   # custom: {
   #   families: ['league-gothic', 'franklin-gothic', 'adelle']

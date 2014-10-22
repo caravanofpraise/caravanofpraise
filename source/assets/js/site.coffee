@@ -9,17 +9,17 @@ $ ->
   new WOW(offset: 100).init()
 
   # Background images
-  $.backstretch [
-    "#{imgurl}/bg_brickwall.jpg"
-    "#{imgurl}/bg_canyon.jpg"
-    "#{imgurl}/bg_typewriter.jpg"
-    "#{imgurl}/bg_lalang.jpg"
-    "#{imgurl}/bg_palm.jpg"
-    "#{imgurl}/bg_wood.jpg"
-    "#{imgurl}/bg_river.jpg"
-    ],
-      duration: 10000,
-      fade: 2000
+  # $.backstretch [
+  #   "#{imgurl}/bg_brickwall.jpg"
+  #   # "#{imgurl}/bg_canyon.jpg"
+  #   "#{imgurl}/bg_typewriter.jpg"
+  #   "#{imgurl}/bg_lalang.jpg"
+  #   # "#{imgurl}/bg_palm.jpg"
+  #   "#{imgurl}/bg_wood.jpg"
+  #   # "#{imgurl}/bg_river.jpg"
+  #   ],
+  #     duration: 10000,
+  #     fade: 2000
 
   # masonry
   $container = $('.masonry')
