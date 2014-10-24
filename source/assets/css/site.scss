@@ -67,8 +67,8 @@ b { font-weight: 700 }
 
   h1 {
     margin-bottom: 0;
-    font-weight: 600;
-    color: $bittersweet-light;
+    font-weight: 300;
+    // color: $bittersweet-light;
   }
 
   h2 {
@@ -89,13 +89,28 @@ b { font-weight: 700 }
   }
 
   .masthead-logo {
-    margin-top: 8rem;
+    margin-bottom: 8rem;
 
     img {
       width: 60%;
 
       @media #{$small-only} {
         width: 100%;
+      }
+    }
+  }
+
+  .social {
+    text-align: center;
+    margin-top: 2rem;
+
+    a {
+      margin: 0 2px;
+      opacity: .9;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
