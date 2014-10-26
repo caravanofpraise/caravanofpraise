@@ -24,6 +24,8 @@ $success-color   : $mint-light;
 $warning-color   : $sunflower-dark;
 $info-color      : $aqua-dark;
 
+$body-font-color: $darkgray-light;
+
 $header-font-color: #fff;
 
 $h1-font-size: rem-calc(90);
@@ -38,13 +40,10 @@ $paragraph-font-size: 1.2rem;
 $paragraph-line-height: 1.2;
 $paragraph-margin-bottom: 0;
 
-$topbar-bg-color: $bittersweet-light;
-
-
 
 // ===================================
 // Animate.scss
-$enable-all-modules: true;
+// $enable-all-modules: true;
 
 
 // ===================================

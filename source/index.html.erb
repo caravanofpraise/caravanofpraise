@@ -1,19 +1,28 @@
     <!-- ******************** MASTHEAD SECTION ******************** -->
-    <main class="masthead screen" id="top" role="main" data-scroll-index="0">
+    <main class="masthead screen" id="top" role="main">
       <div class="container">
         <div class="row">
           <div class="large-12 columns">
             <div class="masthead-logo">
               <img alt="logo" src="<%= imgurl("logo.png") %>">
             </div>
-
-            <h1 class="wow fade-in-down" data-wow-delay="0s">Come Join The Caravan!</h1>
-            <!-- <h2 class="wow fade-in-up" data-wow-delay="0.5s">Let's Raise To Praise</h2> -->
-
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-4 medium-6 small-8 small-centered columns">
+            <div class="bigtext">
+              <h1 class="wow fade-in-down" data-wow-delay="0s">Come Join</h1>
+              <h2>The Caravan!</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-12 columns">
             <div class="social">
-              <a href="https://www.facebook.com/caravanofpraise"><img src="<%= imgurl("social/facebook.png") %>" alt=""
-              ></a><a href="http://instagram.com/caravanofpraise"><img src="<%= imgurl("social/instagram.png") %>" alt=""
-              ></a><a href="http://www.youtube.com/channel/UCHCtQz9Y1gbzbmUwMwNNjhg"><img src="<%= imgurl("social/youtube.png") %>" alt=""></a>
+              <a href="http://facebook.com/caravanofpraise"><img src="<%= imgurl("social/facebook-a.svg") %>" alt=""></a>
+              <a href="https://www.youtube.com/channel/UCHCtQz9Y1gbzbmUwMwNNjhg"><img src="<%= imgurl("social/youtube-a.svg") %>" alt=""></a>
+              <a href="http://instagram.com/caravanofpraise"><img src="<%= imgurl("social/instagram-a.svg") %>" alt=""></a>
+              <a href="http://inteammobile.com/v2"><img src="<%= imgurl("cart.svg") %>" alt=""></a>
             </div>
           </div>
         </div>
@@ -21,7 +30,7 @@
     </main>
 
     <!-- ******************** LYRICS ******************** -->
-    <section class="lyrics" data-scroll-index="2">
+    <section class="lyrics">
       <div class="container">
         <div class="row">
           <div class="large-12 columns">
@@ -94,53 +103,50 @@
       </div>
     </section>
 
-    <!-- ******************** BIG BOTTOM ******************** -->
-    <section class="big-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="small-10 large-9 small-centered columns">
-            <div class="bigtext-wrapper">
-              <h1 class="hsjs wow fade-in-left" data-wow-delay="0s">Come Join The Caravan</h1>
-              <h2 class="hsjs wow fade-in-right" data-wow-delay="0.5s">Let's Praise To Raise</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ******************** MASONRY ******************** -->
     <section class="gallery">
       <div class="container">
-        <div class="row">
-          <div class="small-12 columns">
-            <!-- <h2>Our Activites</h2> -->
+        <!-- <h2>Our Activites</h2> -->
 
-            <div class="masonry">
-<% list_gallery_thumbs.each do |thumb| %>
-              <div class="item<%= thumb.landscape ? ' w2' : '' %>">
-                <div class="in">
-                  <div class="ol"></div>
-                  <img src="<%= thumb.url %>" alt="">
-                </div>
-              </div>
-<% end %>
+        <div class="masonry">
+<% list_gallery_thumbs.each_with_index do |thumb, i| %>
+<% if i == 0 then %>
+          <div class="item title title-1">
+            <div class="in">
+              <div class="bigtext"><h1>#Come.</h1></div>
             </div>
-
           </div>
+<% end %>
+<% if i == 10 then %>
+          <div class="item title title-2">
+            <div class="in">
+              <div class="bigtext"><h1>#Join.</h1></div>
+            </div>
+          </div>
+<% end %>
+<% if i == 35 then %>
+          <div class="item title title-3">
+            <div class="in">
+              <h1>#The</h1>
+              <div class="bigtext"><h1>Caravan.</h1></div>
+            </div>
+          </div>
+<% end %>
+
+          <div class="item<%= thumb.landscape ? ' w2' : '' %>">
+            <div class="in">
+              <img src="<%= thumb.url %>" alt="">
+            </div>
+          </div>
+<% end %>
         </div>
+
+        <div class="item footer">
+          <footer>
+            <p>&copy; 2014 All rights reserved.</p>
+            <p class="credit">Developed with <i class="fa fa-heart"></i> by Mahabbah Tech.</p>
+          </footer>
+        </div>
+
       </div>
     </section>
-
-    <!-- ******************** FOOTER ******************** -->
-    <footer data-scroll-index="3">
-      <div class="container">
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="box">
-              <p>&copy; 2014 All rights reserved.</p>
-              <p class="credit">Developed with <i class="fa fa-heart"></i> by Mahabbah Tech.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
