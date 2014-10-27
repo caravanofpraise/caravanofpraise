@@ -294,25 +294,14 @@ b { font-weight: 700 }
 
 .gallery {
   position: relative;
-  // background: #fff url(#{$imgurl}/pt_Chl8GSo.jpg);
-  // box-shadow: 0 0 15px rgba(#000, .5);
-
-  // &::before {
-  //   @extend .bg-overlay;
-  //   content: "";
-  //   background: #fff;
-  //   opacity: .9;
-  // }
 
   .container {
     padding: 0;
   }
 
-
   // Masonry
   .item {
-    width: 25%;
-    // box-shadow: 0 0 30px rgba(#000, .5);
+    width: 33.333%;
 
     @media #{$medium-only} {
       width: 50%;
@@ -330,30 +319,24 @@ b { font-weight: 700 }
         display: block;
         width: 100%;
       }
-
-      &:hover {
-        .ol {
-          opacity: 0;
-        }
-      }
     }
   }
 
   .item.w2 {
-    width: 50%
+    // width: 66.666%
   }
 
   .item.title {
     background: #fff;
     text-align: center;
-    width: 50%;
+    // width: 66.666%;
 
     .in {
-      margin: 20px;
+      margin: 30px;
       padding: 6rem 3rem;
     }
 
-    &.title-1 .in { background: $bittersweet-light; }
+    &.title-1 .in { background: $mint-light; }
     &.title-2 .in { background: $grass-light; }
     &.title-3 .in {
       background: $lavender-light;
@@ -377,11 +360,12 @@ b { font-weight: 700 }
     footer {
       margin: 20px;
       padding: 6rem 3rem;
-      background: $grapefruit-light;
+      background: $aqua-dark;
 
       h3, h4 {
         margin: 0;
         font-size: 1em;
+        font-weight: 300;
         line-height: 1.2;
       }
     }
