@@ -7,12 +7,9 @@ $ ->
   FastClick?.attach document.body
 
   # Wow animation
-  if WOW? then new WOW(offset: 100).init()
+  # if WOW? then new WOW(offset: 100).init()
 
   # masonry
   $container = $('.masonry')
-  $container.imagesLoaded? -> $container.masonry? itemSelector: '.item'
-  $container.masonry? itemSelector: '.item'
-
-  # parallax
-  $.stellar?();
+  $container.imagesLoaded? -> $container.packery? itemSelector: '.item'
+  $container.packery? itemSelector: '.item'

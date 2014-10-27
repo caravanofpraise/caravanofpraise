@@ -311,7 +311,7 @@ b { font-weight: 700 }
 
   // Masonry
   .item {
-    width: calc(100% / 3);
+    width: 25%;
     // box-shadow: 0 0 30px rgba(#000, .5);
 
     @media #{$medium-only} {
@@ -339,9 +339,14 @@ b { font-weight: 700 }
     }
   }
 
+  .item.w2 {
+    width: 50%
+  }
+
   .item.title {
     background: #fff;
     text-align: center;
+    width: 50%;
 
     .in {
       margin: 20px;
