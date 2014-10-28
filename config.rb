@@ -49,6 +49,7 @@ configure :development do
   # activate :directory_indexes
   # activate :asset_hash
   # activate :cache_buster
+  # activate :minify_css
   set :debug_assets, true
 end
 

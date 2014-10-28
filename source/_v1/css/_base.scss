@@ -1,12 +1,15 @@
 // CDN assets
 // @import "//fonts.googleapis.com/css?family=Raleway:300,700";
 @import "//fonts.googleapis.com/css?family=Shadows+Into+Light";
-@import "//fonts.googleapis.com/css?family=Amatic+SC:400,700";
+@import "//fonts.googleapis.com/css?family=Amatic+SC";
 @import "//cdn.jsdelivr.net/fontawesome/4.2.0/css/font-awesome.min.css";
 
 // ===================================
 // Foundation
 @import "settings";
+
+// $base-font-size: 18px;
+// $base-line-height: $base-font-size * 1.2;
 
 $row-width: rem-calc(1200);
 $total-columns: 12;
@@ -42,6 +45,7 @@ $paragraph-margin-bottom: 0;
 // ===================================
 // Animate.scss
 // $enable-all-modules: true;
+
 
 // ===================================
 // Misc

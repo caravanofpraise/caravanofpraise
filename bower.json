@@ -11,7 +11,7 @@
     "jquery-easing": "*",
     "jquery-waypoints": "~2.0.5",
     "jquery-backstretch": "~2.0.4",
-    "foundation": "5.4.5",
+    "foundation": "5.4.6",
     "vide": "~0.1.4",
     "fastclick": "~1.0.3",
     "modernizr": "~2.8.3",
@@ -26,7 +26,6 @@
     "imagesloaded": "~3.1.8",
     "jquery.lazyload": "~1.9.3",
     "stellar": "~0.6.2",
-    "freewall": "~1.0.4",
     "packery": "~1.2.4"
   },
   "resolutions": {
