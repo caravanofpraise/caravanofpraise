@@ -1,0 +1,41 @@
+    <section class="gallery">
+      <div class="container">
+<% list_gallery_thumbs.each_with_index do |thumb, i| %>
+<% if i == 0 then %>
+        <div class="item title title-1">
+          <div class="in">
+            <h1>#Come.</h1>
+          </div>
+        </div>
+<% end %>
+<% if i == 10 then %>
+        <div class="item title title-2">
+          <div class="in">
+            <h1>#Join.</h1>
+          </div>
+        </div>
+<% end %>
+<% if i == 35 then %>
+        <div class="item title title-3">
+          <div class="in">
+            <h1>#The</h1>
+            <h1>Caravan.</h1>
+          </div>
+        </div>
+<% end %>
+
+        <div class="item<%= thumb.landscape ? ' w2' : '' %>">
+          <div class="in">
+            <img src="<%= thumb.url %>" alt="">
+          </div>
+        </div>
+<% end %>
+
+        <div class="item title footer">
+          <footer class="in">
+            <p>&copy; 2014 All rights reserved.</p>
+            <p class="credit">Developed with <i class="fa fa-heart"></i> by Mahabbah Tech.</p>
+          </footer>
+        </div>
+      </div>
+    </section>
