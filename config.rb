@@ -100,8 +100,7 @@ helpers do
   def list_gallery_thumbs
     require "ostruct"
 
-    imagefiles = Dir["#{root}/source/assets/img/gth2/*.{jpg,jpeg}"]
-    imagefiles += Dir["#{root}/source/assets/img/gth/*.{jpg,jpeg}"]
+    imagefiles = Dir["#{root}/source/assets/img/{gth3,gth2,gth}/*.{jpg,jpeg}"]
 
     images = Array.new
     imagefiles.collect do |path|

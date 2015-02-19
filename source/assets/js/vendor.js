@@ -2,6 +2,7 @@
 //= require "fastclick"
 //= require "imagesloaded/imagesloaded.pkgd.js"
 //= require "masonry/dist/masonry.pkgd.js"
+//= require "jquery-unveil"
 // require "packery/dist/packery.pkgd.js"
 // require "jquery.lazyload/jquery.lazyload.js"
 // require "bigtext"

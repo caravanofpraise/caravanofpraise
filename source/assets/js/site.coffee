@@ -13,3 +13,6 @@ $ ->
   $container.masonry()
   $container.imagesLoaded ->
     $container.masonry()
+
+  $("img").unveil 200, ->
+    $container.masonry()

@@ -400,6 +400,7 @@ b { font-weight: 700 }
     .in {
       margin: 30px;
       padding: 6rem 3rem;
+      min-height: 500px;
     }
 
     &.title-1 .in { background: $mint-light; }
