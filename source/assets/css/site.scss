@@ -244,6 +244,16 @@ b { font-weight: 700 }
     padding: 6rem 0 10rem;
   }
 
+  .video {
+    height: 15em;
+    margin-bottom: 3em;
+
+    iframe {
+      width: 80%;
+      height: 100%;
+    }
+  }
+
   h1 {
     color: $bittersweet-light;
     font-size: 6rem;
@@ -438,4 +448,3 @@ b { font-weight: 700 }
 
   }
 }
-
