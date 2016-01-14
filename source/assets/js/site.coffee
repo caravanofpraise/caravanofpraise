@@ -16,3 +16,5 @@ $ ->
 
   $("img").unveil 200, ->
     $container.masonry()
+
+  $(".fitvids").fitVids()

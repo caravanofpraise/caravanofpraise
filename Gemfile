@@ -1,5 +1,5 @@
-#ruby=ruby-2.1.5
-#ruby-gemset=middleman
+#ruby=ruby-2.2.3
+#ruby-gemset=caravanofpraise
 
 source 'https://rubygems.org'
 
